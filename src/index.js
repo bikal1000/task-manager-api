@@ -8,8 +8,8 @@ const app = express()
 const PORT = process.env.PORT || 4000;
 
 app.use(express.json())
-app.use('/api', userRouters)
-app.use('/api', taskRouters)
+app.use(userRouters)
+app.use(taskRouters)
 
 app.listen(PORT, () => {
     console.log(`The server is running on port ${PORT}`)
